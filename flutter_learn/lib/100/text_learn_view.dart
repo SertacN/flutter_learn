@@ -40,6 +40,7 @@ class TextLearnView extends StatelessWidget {
   }
 }
 
+// OOP Kullanımları
 class ProjectStyle {
   static TextStyle get welcomeStyle => const TextStyle(
       color: Colors.lime,
@@ -51,4 +52,14 @@ class ProjectStyle {
 
 class ProjectMessage {
   String welcome = 'Hello';
+}
+
+class ProjectSuperStyle extends TextStyle {
+  const ProjectSuperStyle()
+      : super(
+            color: Colors.lime,
+            fontSize: 16,
+            decoration: TextDecoration.underline,
+            letterSpacing: 2,
+            fontStyle: FontStyle.italic);
 }
