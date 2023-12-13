@@ -5,21 +5,33 @@ class StatelessWidgetLearn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var title2 = 'Sertac';
+    var title3 = 'Sertac2';
+    var title4 = 'Sertac3';
+
     return Scaffold(
       appBar: AppBar(),
-      body: const Column(children: [
-        TitleTextWidget(title: 'Sertac'),
-        TitleTextWidget(title: 'Sertac2'),
-        TitleTextWidget(title: 'Sertac3'),
-        ContainerWidget()
+      body: Column(children: [
+        _TitleTextWidget(title: title2),
+        emptyBox(),
+        _TitleTextWidget(title: title3),
+        emptyBox(),
+        _TitleTextWidget(title: title4),
+        const ContainerWidget()
       ]),
+    );
+  }
+
+  SizedBox emptyBox() {
+    return const SizedBox(
+      height: 10,
     );
   }
 }
 
-class TitleTextWidget extends StatelessWidget {
-  const TitleTextWidget({
-    super.key,
+// _ anlamı sadece o dosyada kullanılabilir.
+class _TitleTextWidget extends StatelessWidget {
+  const _TitleTextWidget({
     required this.title,
   });
   final String title;
