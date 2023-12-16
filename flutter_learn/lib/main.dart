@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_learn/100/custom_widget_learn.dart';
 // import 'package:flutter_learn/100/card_learn.dart';
 // import 'package:flutter_learn/100/image_learn.dart';
-import 'package:flutter_learn/demos/note_demos_app.dart';
+// import 'package:flutter_learn/demos/note_demos_app.dart';
 // import 'package:flutter_learn/100/padding_learn.dart';
 // import 'package:flutter_learn/100/colors_learn.dart';
 // import 'package:flutter_learn/100/stateless_widget_learn.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.light,
       )),
-      home: NoteDemosApp(),
+      home: const CustomWidgetLearn(),
     );
   }
 }

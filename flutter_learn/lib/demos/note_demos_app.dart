@@ -45,7 +45,7 @@ class NoteDemosApp extends StatelessWidget {
 }
 
 class _TextButton extends StatelessWidget {
-  const _TextButton({super.key, required this.buttonText});
+  const _TextButton({required this.buttonText});
 
   final String buttonText;
 
@@ -65,7 +65,6 @@ class _TextButton extends StatelessWidget {
 
 class _CreateButton extends StatelessWidget {
   const _CreateButton({
-    super.key,
     required this.buttonText,
   });
 
@@ -90,6 +89,7 @@ class _CreateButton extends StatelessWidget {
 
 class _SubTitleWidget extends StatelessWidget {
   const _SubTitleWidget({
+    // ignore: unused_element
     this.textAlign = TextAlign.center,
     required this.title,
   });
