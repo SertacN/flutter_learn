@@ -18,6 +18,7 @@ class CustomWidgetLearn extends StatelessWidget {
                 child: _CustomRedButton(
                   title: title,
                   padding: _PaddingUtility().normal2xPadding,
+                  onPressed: () {},
                 )),
             const SizedBox(
               height: 20,
@@ -25,12 +26,18 @@ class CustomWidgetLearn extends StatelessWidget {
             Row(
               children: [
                 _CustomRedButton(
-                    title: title, padding: _PaddingUtility().normalPadding),
+                  title: title,
+                  padding: _PaddingUtility().normalPadding,
+                  onPressed: () {},
+                ),
                 const SizedBox(
                   width: 10,
                 ),
                 _CustomRedButton(
-                    title: title, padding: _PaddingUtility().normalPadding)
+                  title: title,
+                  padding: _PaddingUtility().normalPadding,
+                  onPressed: () {},
+                )
               ],
             ),
           ],
@@ -45,15 +52,17 @@ class _CustomRedButton extends StatelessWidget
   _CustomRedButton({
     required this.title,
     required this.padding,
+    required this.onPressed,
   });
 
   final String title;
   final EdgeInsetsGeometry padding;
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(backgroundColor: colorRed),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Padding(
           padding: padding,
           child: Text(title,
