@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_learn/100/column_row_learn.dart';
 // import 'package:flutter_learn/100/custom_widget_learn.dart';
 // import 'package:flutter_learn/100/indicator_learn.dart';
-import 'package:flutter_learn/100/list_tile.dart';
+// import 'package:flutter_learn/100/list_tile.dart';
 // import 'package:flutter_learn/100/card_learn.dart';
 // import 'package:flutter_learn/100/image_learn.dart';
 // import 'package:flutter_learn/demos/note_demos_app.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const ListTileLearn(),
+      home: const ColumnRowLearn(),
     );
   }
 }
