@@ -22,13 +22,10 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.only(left: 40),
             decoration: ProjectDecoration.projectDecoration,
-            child: Text('a' * 25,
-                style: const TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.bold)),
+            child: Text('a' * 25, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
           ),
           Container(
-            constraints: const BoxConstraints(
-                maxWidth: 100, minWidth: 50, maxHeight: 70, minHeight: 25),
+            constraints: const BoxConstraints(maxWidth: 100, minWidth: 50, maxHeight: 70, minHeight: 25),
             decoration: ProjectSuperDecoration(),
             margin: const EdgeInsets.only(top: 20),
             padding: const EdgeInsets.all(10),
@@ -42,27 +39,18 @@ class ContainerSizedBoxLearn extends StatelessWidget {
 
 // OOP Kullanımları
 class ProjectDecoration {
-  static BoxDecoration get projectDecoration =>
-      BoxDecoration(
-          gradient:
-              const LinearGradient(colors: [Colors.purple, Colors.orange]),
-          border: Border.all(width: 5, color: Colors.cyan),
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: const [
-            BoxShadow(
-                offset: Offset(0.1, 2), color: Colors.pink, blurRadius: 15)
-          ]);
+  static BoxDecoration get projectDecoration => BoxDecoration(
+      gradient: const LinearGradient(colors: [Colors.purple, Colors.orange]),
+      border: Border.all(width: 5, color: Colors.cyan),
+      borderRadius: BorderRadius.circular(10),
+      boxShadow: const [BoxShadow(offset: Offset(0.1, 2), color: Colors.pink, blurRadius: 15)]);
 }
 
 class ProjectSuperDecoration extends BoxDecoration {
   ProjectSuperDecoration()
       : super(
-            gradient:
-                const LinearGradient(colors: [Colors.purple, Colors.orange]),
+            gradient: const LinearGradient(colors: [Colors.purple, Colors.orange]),
             border: Border.all(width: 5, color: Colors.cyan),
             borderRadius: BorderRadius.circular(10),
-            boxShadow: const [
-              BoxShadow(
-                  offset: Offset(0.1, 2), color: Colors.pink, blurRadius: 15)
-            ]);
+            boxShadow: const [BoxShadow(offset: Offset(0.1, 2), color: Colors.pink, blurRadius: 15)]);
 }

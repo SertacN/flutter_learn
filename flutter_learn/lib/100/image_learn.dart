@@ -8,12 +8,7 @@ class ImageLearn extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
-        children: [
-          SizedBox(
-              width: 300,
-              height: 400,
-              child: PngImage(name: ImageItems().appleBook))
-        ],
+        children: [SizedBox(width: 300, height: 400, child: PngImage(name: ImageItems().appleBook))],
       ),
     );
   }

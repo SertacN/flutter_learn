@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/100/column_row_learn.dart';
+// import 'package:flutter_learn/100/column_row_learn.dart';
+// import 'package:flutter_learn/100/stack_learn.dart';
+import 'package:flutter_learn/demos/stack_demos.dart';
 // import 'package:flutter_learn/100/custom_widget_learn.dart';
 // import 'package:flutter_learn/100/indicator_learn.dart';
 // import 'package:flutter_learn/100/list_tile.dart';
@@ -34,15 +36,14 @@ class MyApp extends StatelessWidget {
           listTileTheme: const ListTileThemeData(
             contentPadding: EdgeInsets.zero,
           ),
-          progressIndicatorTheme:
-              const ProgressIndicatorThemeData(color: Colors.white),
+          progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.white),
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
             centerTitle: true,
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const ColumnRowLearn(),
+      home: const StackDemo(),
     );
   }
 }

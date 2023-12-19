@@ -20,8 +20,7 @@ class ListTileLearn extends StatelessWidget {
                 minVerticalPadding: 16,
                 textColor: Colors.red,
                 subtitle: const Text('List tile denemesi'),
-                trailing: const SizedBox(
-                    height: 80, child: Icon(Icons.chevron_right_outlined)),
+                trailing: const SizedBox(height: 80, child: Icon(Icons.chevron_right_outlined)),
                 onTap: () {},
               ),
             ),
