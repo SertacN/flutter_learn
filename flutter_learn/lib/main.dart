@@ -1,23 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:flutter_learn/100/column_row_learn.dart';
-// import 'package:flutter_learn/100/stack_learn.dart';
-import 'package:flutter_learn/demos/stack_demos.dart';
-// import 'package:flutter_learn/100/custom_widget_learn.dart';
-// import 'package:flutter_learn/100/indicator_learn.dart';
-// import 'package:flutter_learn/100/list_tile.dart';
-// import 'package:flutter_learn/100/card_learn.dart';
-// import 'package:flutter_learn/100/image_learn.dart';
-// import 'package:flutter_learn/demos/note_demos_app.dart';
-// import 'package:flutter_learn/100/padding_learn.dart';
-// import 'package:flutter_learn/100/colors_learn.dart';
-// import 'package:flutter_learn/100/stateless_widget_learn.dart';
-// import 'package:flutter_learn/100/appbar_learn.dart';
-// import 'package:flutter_learn/100/icon_learn.dart';
-// import 'package:flutter_learn/100/button_learn.dart';
-// import 'package:flutter_learn/100/container_sized_box_learn.dart';
-// import 'package:flutter_learn/100/scaffold_learn.dart';
-// import 'package:flutter_learn/100/text_learn_view.dart';
+import 'package:flutter_learn/100/page_view_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +26,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const StackDemo(),
+      home: const PageViewLearn(),
     );
   }
 }
