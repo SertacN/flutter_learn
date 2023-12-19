@@ -27,7 +27,7 @@ class _LifeCircleLearnState extends State<LifeCircleLearn> {
     _isEven ? _message += ' Çift' : _message += ' Tek';
   }
 
-  //diduUpdateWidget yukardan gelen bir değişiklik varsa burası tetiklenir.
+  //didUpdateWidget yukardan gelen bir değişiklik varsa burası tetiklenir.
   @override
   void didUpdateWidget(covariant LifeCircleLearn oldWidget) {
     super.didUpdateWidget(oldWidget);
