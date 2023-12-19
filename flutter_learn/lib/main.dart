@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/100/page_view_learn.dart';
+import 'package:flutter_learn/100/statefull_life_circle_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const PageViewLearn(),
+      home: const LifeCircleLearn(message: 'sddc'),
     );
   }
 }
