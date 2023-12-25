@@ -12,6 +12,7 @@ class ModelLearnPractice extends StatefulWidget {
 
 class _ModelLearnPracticeState extends State<ModelLearnPractice> {
   PostModelApi user9 = PostModelApi(body: 'ss');
+  final usss = PostModelLocal(userId: 1, id: 1, title: 'title', body: 'body');
 
   @override
   void initState() {
@@ -37,6 +38,8 @@ class _ModelLearnPracticeState extends State<ModelLearnPractice> {
     final user7 = PostModel7();
     // service
     final user8 = PostModel8(1, 2, 'title', 'body');
+
+    final usss = PostModelLocal(userId: 1, id: 1, title: 'title', body: 'body');
   }
 
   @override
@@ -45,12 +48,12 @@ class _ModelLearnPracticeState extends State<ModelLearnPractice> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            user9.updateBody('aaaa');
+            user9 = user9.copyWith(title: 'Sertac');
           });
         },
       ),
       appBar: AppBar(
-        title: Text(user9.title ?? 'Not has any data'),
+        title: Text(user9.body ?? 'Not has any data'),
       ),
     );
   }

@@ -34,7 +34,11 @@ class PostModelLocal {
   final int userId;
   final int id;
   final String title;
-  final String body;
+  String body;
+
+  void updateBody(String data) {
+    body = data;
+  }
 
   PostModelLocal({
     required this.userId,
