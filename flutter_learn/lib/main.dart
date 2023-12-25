@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/200/tab_learn.dart';
+import 'package:flutter_learn/200/model_learn_practice.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const TabLearn(),
+      home: const ModelLearnPractice(),
     );
   }
 }
