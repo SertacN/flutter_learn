@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/100/navigation_learn.dart';
+import 'package:flutter_learn/200/tab_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,22 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+          //  FLOATING ACTION BUTTON THEME
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            shape: CircleBorder(),
+          ),
+          // BOTTOM APP BAR THEME
+          bottomAppBarTheme: const BottomAppBarTheme(
+            shape: CircularNotchedRectangle(),
+            color: Colors.transparent,
+            elevation: 1,
+          ),
+          //  TABBAR THEME
+          tabBarTheme: const TabBarTheme(
+            indicatorSize: TabBarIndicatorSize.tab,
+            unselectedLabelColor: Colors.grey,
+            indicatorColor: Colors.green,
+          ),
           // INPUT THEME
           inputDecorationTheme: const InputDecorationTheme(
               border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -34,7 +50,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const NavigationLearn(),
+      home: const TabLearn(),
     );
   }
 }
