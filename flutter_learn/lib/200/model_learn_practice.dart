@@ -49,6 +49,7 @@ class _ModelLearnPracticeState extends State<ModelLearnPractice> {
         onPressed: () {
           setState(() {
             user9 = user9.copyWith(title: 'Sertac');
+            user9.updateBody('data');
           });
         },
       ),
