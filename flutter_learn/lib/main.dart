@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/200/service/post_model_get_view.dart';
+import 'package:flutter_learn/demos/password_text_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +50,6 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
-        home: const PostModelGetView());
+        home: const PasswordField());
   }
 }
