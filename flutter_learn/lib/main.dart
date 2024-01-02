@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/200/animated_learn_view.dart';
+import 'package:flutter_learn/200/form_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +50,6 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
-        home: const AnimatedLearnView());
+        home: const FormLearnView());
   }
 }
