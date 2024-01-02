@@ -31,6 +31,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
     );
   }
 
+  // ignore: unused_element
   IconButton _visibilityIconButton() {
     return IconButton(
         onPressed: () {
