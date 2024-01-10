@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+part 'part_appbar.dart';
 
 class PartofLearn extends StatefulWidget {
   const PartofLearn({super.key});
@@ -10,6 +11,8 @@ class PartofLearn extends StatefulWidget {
 class _PartofLearnState extends State<PartofLearn> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      appBar: _PartofAppBar(),
+    );
   }
 }
