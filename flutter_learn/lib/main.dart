@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/300/tabbar_advance.dart';
+import 'package:flutter_learn/300/reqres_resource/view/reqres_provider_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +50,6 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
-        home: const TabbarAdvanceLearn());
+        home: const ReqresViewProvider());
   }
 }
