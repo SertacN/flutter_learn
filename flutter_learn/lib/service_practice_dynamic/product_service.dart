@@ -11,8 +11,9 @@ class ProductService implements IProductService {
 
   ProductService()
       : _dio = Dio(BaseOptions(
-            baseUrl: 'https://friendsapi.clbbaris.com/api/can/product/',
-            headers: {"api-key": "0d114762-360e-450e-99e6-36137409977d"}));
+          baseUrl: 'https://friendsapi.clbbaris.com/api/can/product/',
+          headers: {"api-key": "API_KEY"},
+        ));
 
   @override
   Future<List<ProductModel>?> getProductItems() async {
