@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/300/reqres_resource/model/resource_model.dart';
 import 'package:flutter_learn/300/reqres_resource/service/reqres_service.dart';
 import 'package:flutter_learn/300/reqres_resource/view_model/reqres_provider.dart';
+import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:flutter_learn/product/service/project_dio.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_learn/product/extension/string_extension.dart';
@@ -19,6 +20,13 @@ class _ReqresViewProviderState extends State<ReqresViewProvider> with ProjectDio
     return ChangeNotifierProvider<ReqresProvider>(
       create: (context) => ReqresProvider(ReqresService(reqresDio)),
       builder: (context, child) => Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            context.read<ThemeNotifier>().changeTheme();
+          },
+          child:
+              Icon(context.watch<ThemeNotifier>().isLightTheme ? Icons.light_mode_outlined : Icons.dark_mode_outlined),
+        ),
         appBar: AppBar(
           title: context.watch<ReqresProvider>().isLoading
               ? const CircularProgressIndicator.adaptive()

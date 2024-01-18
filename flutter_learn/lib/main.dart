@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_learn/300/reqres_resource/view/reqres_provider_view.dart';
+import 'package:flutter_learn/product/global/theme_notifer.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => ThemeNotifier(),
+      )
+    ],
+    builder: (context, child) => const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
+        theme: context.watch<ThemeNotifier>().currentTheme.copyWith(
             //  FLOATING ACTION BUTTON THEME
             floatingActionButtonTheme: const FloatingActionButtonThemeData(
               shape: CircleBorder(),
