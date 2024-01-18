@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/300/reqres_resource/view/reqres_provider_view.dart';
+import 'package:flutter_learn/300/lottie_learn.dart';
 import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:provider/provider.dart';
 
@@ -59,6 +59,6 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.light,
             )),
-        home: const ReqresViewProvider());
+        home: const LottieLearn());
   }
 }
