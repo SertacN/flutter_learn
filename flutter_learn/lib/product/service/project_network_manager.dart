@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_learn/product/service/project_dio.dart';
 
-class ProjectNetworkManager {
+class ProjectNetworkManager with ProjectDioMixin {
   ProjectNetworkManager._() {
-    _dio = Dio(BaseOptions(baseUrl: ''));
+    _dio = Dio(BaseOptions(baseUrl: 'https://reqres.in/api/'));
   }
   late final Dio _dio;
 

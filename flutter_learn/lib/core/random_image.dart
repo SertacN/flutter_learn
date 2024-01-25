@@ -10,7 +10,7 @@ class RandomImage extends StatelessWidget {
     return Image.network(
       imageUrl,
       fit: BoxFit.cover,
-      height: heigh,
+      height: heigh, 
     );
   }
 }
