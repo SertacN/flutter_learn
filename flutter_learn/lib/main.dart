@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn/300/auto_route/product/navigator/app_router.dart';
+// import 'package:flutter_learn/300/auto_route/product/navigator/app_router.dart';
+import 'package:flutter_learn/300/mobx/view/mobx_learn_view.dart';
 import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:flutter_learn/product/navigator/navigate_custom.dart';
 import 'package:provider/provider.dart';
@@ -22,8 +23,10 @@ class MyApp extends StatelessWidget with NavigateCustom {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter().config(),
+    return MaterialApp(
+      //MaterialApp.router()
+      // routerConfig: AppRouter().config(),
+      home: const MobxLearnView(),
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifier>().currentTheme.copyWith(
@@ -61,6 +64,7 @@ class MyApp extends StatelessWidget with NavigateCustom {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
+
       // onUnknownRoute: (settings) {
       //   return MaterialPageRoute(builder: (context) {
       //     return const LottieLearn();
