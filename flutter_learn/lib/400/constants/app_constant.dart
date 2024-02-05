@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: constant_identifier_names
 
-/// Lottie Learn'de test edildi.
-@immutable
-final class StringConstants {
-  const StringConstants._();
-
-  static const String appTitle = 'Most Popular';
-  static const String subTitle = 'This is a popular plant in our store';
+class AppConstant {
+  static const LANG_ASSETS_PATH = 'assets/translation';
 }

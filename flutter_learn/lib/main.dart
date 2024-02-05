@@ -1,20 +1,28 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_learn/300/lottie_learn.dart';
+import 'package:flutter_learn/400/constants/app_constant.dart';
+import 'package:flutter_learn/400/core/init/lang/language_manager.dart';
 // import 'package:flutter_learn/300/auto_route/product/navigator/app_router.dart';
 import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:flutter_learn/product/navigator/navigate_custom.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (context) => ThemeNotifier(),
-      )
-    ],
-    builder: (context, child) => const MyApp(),
-  ));
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(EasyLocalization(
+      supportedLocales: LanguageManager.instance.supportedLocales,
+      path: AppConstant.LANG_ASSETS_PATH,
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => ThemeNotifier(),
+          )
+        ],
+        builder: (context, child) => const MyApp(),
+      )));
 }
 
 class MyApp extends StatelessWidget with NavigateCustom {
@@ -26,7 +34,9 @@ class MyApp extends StatelessWidget with NavigateCustom {
     return MaterialApp(
       // MaterialApp.router()
       // routerConfig: AppRouter().config(),
-
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       home: const LottieLearn(),
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

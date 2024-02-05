@@ -1,6 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/400/constants/app_constant.dart';
+import 'package:flutter_learn/400/constants/string_constant.dart';
 import 'package:flutter_learn/400/constants/image_constants.dart';
+import 'package:flutter_learn/400/core/extension/string_extension.dart';
+import 'package:flutter_learn/400/core/init/lang/language_manager.dart';
+import 'package:flutter_learn/400/core/init/lang/locale_keys.g.dart';
+
 import 'package:flutter_learn/400/enums/image_enums.dart';
 import 'package:flutter_learn/product/constants/duration_items.dart';
 import 'package:flutter_learn/product/constants/lottie_items.dart';
@@ -28,7 +33,13 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.setLocale(LanguageManager.instance.trLocal);
+        },
+      ),
       appBar: AppBar(
+        title: Text(LocaleKeys.title.locale),
         actions: [
           InkWell(
               onTap: () {
@@ -50,6 +61,18 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
                   child: ListTile(
                     title: Text(
                       StringConstants.appTitle,
+                      style: TextStyle(color: Theme.of(context).colorScheme.tertiary),
+                    ),
+                    subtitle: const Text(StringConstants.subTitle),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Card(
+                  color: Theme.of(context).colorScheme.tertiaryContainer,
+                  child: ListTile(
+                    title: Text(
+                      LocaleKeys.cardHeader.locale,
                       style: TextStyle(color: Theme.of(context).colorScheme.tertiary),
                     ),
                     subtitle: const Text(StringConstants.subTitle),
