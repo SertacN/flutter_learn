@@ -5,13 +5,16 @@ import 'package:flutter_learn/400/constants/image_constants.dart';
 import 'package:flutter_learn/400/core/extension/string_extension.dart';
 import 'package:flutter_learn/400/core/init/lang/language_manager.dart';
 import 'package:flutter_learn/400/core/init/lang/locale_keys.g.dart';
-
 import 'package:flutter_learn/400/enums/image_enums.dart';
 import 'package:flutter_learn/product/constants/duration_items.dart';
 import 'package:flutter_learn/product/constants/lottie_items.dart';
 import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
+
+/// Tema değişiklik butonu.
+/// Localization örnekleri
+/// Enumdan veya class dan key okuma
 
 class LottieLearn extends StatefulWidget {
   const LottieLearn({super.key});
@@ -33,10 +36,22 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.setLocale(LanguageManager.instance.trLocal);
-        },
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            child: const Text('TR'),
+            onPressed: () {
+              context.setLocale(LanguageManager.instance.trLocal);
+            },
+          ),
+          FloatingActionButton(
+            child: const Text('ENG'),
+            onPressed: () {
+              context.setLocale(LanguageManager.instance.enLocal);
+            },
+          ),
+        ],
       ),
       appBar: AppBar(
         title: Text(LocaleKeys.title.locale),
