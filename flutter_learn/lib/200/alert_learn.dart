@@ -45,9 +45,8 @@ class _AlertLearnState extends State<AlertLearn> {
 // }
 
 class UpdateDialog extends AlertDialog {
-  UpdateDialog({Key? key, required BuildContext context})
+  UpdateDialog({super.key, required BuildContext context})
       : super(
-          key: key,
           title: const Text('Update'),
           actions: [
             ElevatedButton(onPressed: () {}, child: const Text('Update')),
@@ -79,9 +78,8 @@ class UpdateDialog extends AlertDialog {
 // }
 
 class ImageZoomDialog extends Dialog {
-  ImageZoomDialog({Key? key})
+  ImageZoomDialog({super.key})
       : super(
-          key: key,
           insetPadding: EdgeInsets.zero,
           child: InteractiveViewer(
             child: Image.network(

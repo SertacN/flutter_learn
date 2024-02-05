@@ -4,6 +4,7 @@ import 'package:flutter_learn/product/service/project_dio.dart';
 import 'package:mobx/mobx.dart';
 part 'mobx_learn_view_model.g.dart';
 
+// ignore: library_private_types_in_public_api
 class MobxLearnViewModel = _MobxLearnViewModelBase with _$MobxLearnViewModel;
 
 abstract class _MobxLearnViewModelBase with Store, ProjectDioMixin {
