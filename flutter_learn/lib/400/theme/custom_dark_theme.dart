@@ -7,5 +7,6 @@ class CustomDarkTheme {
     fontFamily: GoogleFonts.roboto().fontFamily,
     useMaterial3: true,
     colorScheme: CustomColorSchema.darkColorScheme,
+    // textTheme: const TextTheme(headlineLarge: TextStyle(fontSize: 24)));
   );
 }

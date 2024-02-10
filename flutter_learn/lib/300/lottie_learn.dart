@@ -76,7 +76,10 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
                   child: ListTile(
                     title: Text(
                       StringConstants.appTitle,
-                      style: TextStyle(color: Theme.of(context).colorScheme.tertiary),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.copyWith(color: Theme.of(context).colorScheme.tertiary),
                     ),
                     subtitle: const Text(StringConstants.subTitle),
                   ),
