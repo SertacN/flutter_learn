@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TitleTextButton extends StatelessWidget {
-  const TitleTextButton({super.key, required this.onPressed, required this.title});
-  final VoidCallback onPressed;
+  const TitleTextButton({super.key, this.onPressed, required this.title});
+  final VoidCallback? onPressed;
   final String title;
   @override
   Widget build(BuildContext context) {

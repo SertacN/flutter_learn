@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_learn/400/atomic-design/authenticate/onboard/view/on_board_view.dart';
-
 import 'package:flutter_learn/400/constants/app_constant.dart';
 import 'package:flutter_learn/400/core/cache/cache_manager.dart';
 import 'package:flutter_learn/400/core/init/lang/language_manager.dart';
+
 // import 'package:flutter_learn/300/auto_route/product/navigator/app_router.dart';
 import 'package:flutter_learn/product/global/theme_notifer.dart';
 import 'package:flutter_learn/product/navigator/navigate_custom.dart';
