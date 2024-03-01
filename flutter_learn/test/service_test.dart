@@ -10,11 +10,11 @@ void main() {
     reqresService = ReqresService(ProjectNetworkManager.instance.reqresDio);
   });
   test('Reqres Fetch Test', () async {
-    model = await fetch(reqresService);
+    model = await _fetch(reqresService);
     expect(model, isNotEmpty);
   });
 }
 
-Future<List<Data>?> fetch(IReqresService reqresService) async {
+Future<List<Data>?> _fetch(IReqresService reqresService) async {
   return (await reqresService.fetchResource())?.data ?? [];
 }
